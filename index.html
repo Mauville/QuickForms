@@ -41,12 +41,12 @@
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
       <p class="question-description">This is a small description</p>
-      <input type="text" name="q1"/>
+      <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
       <p class="question-description">This is a small description</p>
-      <input type="text" name="q1"/>
+      <input type="text" class="field" name="q1"/>
     </div>
     <input type="button" class="next-section" value="Next">
   </section>
@@ -58,24 +58,24 @@
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
       <p class="question-description">This is a small description</p>
-      <input type="text" name="q1"/>
+      <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
       <p class="question-description">This is a small description</p>
-      <input type="text" name="q1"/>
+      <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
       <p class="question-description">This is a small description</p>
-      <input type="text" name="q1"/>
+      <input type="text" class="field" name="q1"/>
     </div>
     <input type="button" class="previous-section" value="Back">
     <input type="button" class="next-section" value="Next">
   </section>
-<!--  <section></section>-->
-<!--  <section></section>-->
-<!--  <section></section>-->
+  <!--  <section></section>-->
+  <!--  <section></section>-->
+  <!--  <section></section>-->
   <section id="section results" class="section">
     <header>
       <h1>Results</h1>
@@ -100,12 +100,11 @@
 
   function updateResults() {
     $("#results-box").empty();
-    let results = {}
-    $(".question-box").each(function (index){
+    $(".question-box").each(function () {
       const title = ($(this).find(".question-title").text());
       const content = ($(this).find(".field").val())
       console.log(content)
-      if(content !== undefined){
+      if (content) {
         let str = `<div class="summary-question-box">
           <h4 class="summary-question-title">${title}</h4>
           <p class="summary-question-answer">${content}</p>
@@ -113,7 +112,6 @@
         $("#results-box").append(str);
       }
     });
-    // console.log($(".field").val());
   }
 
   $(".next-section").on("click", function () {
