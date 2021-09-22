@@ -36,7 +36,7 @@
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
       <p class="question-description">This is a small description</p>
-      <input type="text" name="q1"/>
+      <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
       <h4 class="question-title">Question Title</h4>
@@ -73,16 +73,51 @@
     <input type="button" class="previous-section" value="Back">
     <input type="button" class="next-section" value="Next">
   </section>
-  <section></section>
-  <section></section>
-  <section></section>
-  <section id="results"></section>
-  <section id="thank-you"></section>
+<!--  <section></section>-->
+<!--  <section></section>-->
+<!--  <section></section>-->
+  <section id="section results" class="section">
+    <header>
+      <h1>Results</h1>
+      <p class="section-description">Check your results here</p>
+    </header>
+    <div id="results-box">
+
+    </div>
+    <input type="button" class="previous-section" value="Back">
+    <input type="button" class="next-section" value="Send">
+  </section>
+  <section id="thank-you" class="section">
+    <div id="thank-you-box">
+      <h1>Thank you</h1>
+      <p class="section-description">Thank you note.</p>
+    </div>
+    <input type="button" class="previous-section" value="DELETEMEINPROD">
+  </section>
 </form>
 
 <script>
 
+  function updateResults() {
+    $("#results-box").empty();
+    let results = {}
+    $(".question-box").each(function (index){
+      const title = ($(this).find(".question-title").text());
+      const content = ($(this).find(".field").val())
+      console.log(content)
+      if(content !== undefined){
+        let str = `<div class="summary-question-box">
+          <h4 class="summary-question-title">${title}</h4>
+          <p class="summary-question-answer">${content}</p>
+        </div> `
+        $("#results-box").append(str);
+      }
+    });
+    // console.log($(".field").val());
+  }
+
   $(".next-section").on("click", function () {
+    updateResults();
     console.log("Going next")
     const cs = $(".current-section")
     cs.next().toggleClass("current-section");
