@@ -31,44 +31,44 @@
 <form>
   <section class="section current-section">
     <header>
-      <h1>Section 1</h1>
-      <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h1>HACK-CCM 2021 Forumulario 1/2</h1>
+      <p class="section-description">El siguiente formulario es para el registro de proyecto para <b>HACK-CCM 2021</b></p>
     </header>
     <div class="question-box">
-      <h4 class="question-title">How do you plan to use your existing skills to improve organizational growth, if hired?</h4>
-      <p class="question-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h4 class="question-title">Nombre del equipo</h4>
+      <p class="question-description">Escribe aqui el nombre del equipo para HACK-CCM 2021</p>
       <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
-      <h4 class="question-title">Please describe a scenario where our online marketplace helps you make day-to-day purchases</h4>
-      <p class="question-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h4 class="question-title">Integrantes del equipo</h4>
+      <p class="question-description">Escribe aqui los datos de los integrantes del equipo</p>
       <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
-      <h4 class="question-title">Can you please explain the back-end Javascript code template used for this webpage?</h4>
-      <p class="question-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h4 class="question-title">Descripcion del proyecto</h4>
+      <p class="question-description">Escribe aqui una descripcion corta del proyeto que se realizara en HACK-CCM 2021</p>
       <input type="text" class="field" name="q1"/>
     </div>
     <input type="button" class="next-section" value="Next">
   </section>
   <section id="section" class="section">
     <header>
-      <h1>Section 2</h1>
-      <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h1>HACK-CCM 2021 Forumulario 2/2</h1>
+      <p class="section-description">Continuacion para el formulario del registro de proyecto para <b>HACK-CCM 2021</b></p>
     </header>
     <div class="question-box">
-      <h4 class="question-title">What are your professional priorities at the moment?</h4>
-      <p class="question-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h4 class="question-title">¿Como se relaciona el proyecto a tematica del hackaton?</h4>
+      <p class="question-description">Menciona brevemente como el proyecto se relaciona del hackaton</p>
       <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
-      <h4 class="question-title">What domain of work motivates you?</h4>
-      <p class="question-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h4 class="question-title">¿Como el proyecto soluciona alguno de los objetivos del hackaton?</h4>
+      <p class="question-description">Menciona brevemente como el proyecto se soluciona alguna de las problematicas propuestas por el hackaton</p>
       <input type="text" class="field" name="q1"/>
     </div>
     <div class="question-box">
-      <h4 class="question-title">Tell us about your experience with our onboarding process</h4>
-      <p class="question-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci vero molestiae delectus placeat nostrum necessitatibus molestias quae omnis eos labore dicta, eius, consectetur magni a, est id perspiciatis. Voluptatum.</p>
+      <h4 class="question-title">¿Que limitaciones de tecnología inmediatas tiene el proyecto?</h4>
+      <p class="question-description">Menciona cuales son los limites que identificas que posiblemente dificulen el desarroyo del proyecto?</p>
       <input type="text" class="field" name="q1"/>
     </div>
     <input type="button" class="previous-section" value="Atras">
@@ -79,21 +79,21 @@
   <!--  <section></section>-->
   <section id="section results" class="section">
     <header>
-      <h1>Results</h1>
-      <p class="section-description">Check your results here</p>
+      <h1>Resumen</h1>
+      <p class="section-description">Revisa tus respuestas antes de registrarlas</p>
     </header>
     <div id="results-box">
 
     </div>
     <input type="button" class="previous-section" value="Atras">
-    <input type="button" class="next-section" value="Siguiente">
+    <input type="button" class="next-section" value="Terminar registro">
   </section>
   <section id="thank-you" class="section">
     <div id="thank-you-box">
-      <h1>Thank you</h1>
-      <p class="section-description">Thank you note.</p>
+      <h1 class="summary-question-title">Gracias</h1>
+      <p class="summary-question-answer section-description">Bienvenido a HACK-CCM 2021</p>
     </div>
-    <input type="reset" class="previous-section" value="DELETEMEINPROD">
+    <input type="reset" id="reset" value="Crear otro registro">
   </section>
 </form>
 </div>
@@ -127,6 +127,9 @@
     const cs = $(".current-section")
     cs.prev().toggleClass("current-section");
     cs.toggleClass("current-section");
+  });
+  $("#reset").click(function(){
+    document.location.reload(true);
   });
 </script>
 
